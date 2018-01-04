@@ -65,3 +65,8 @@ typings/
 .\#*
 *~
 .idea/
+
+# Application
+es/
+lib/
+app/
