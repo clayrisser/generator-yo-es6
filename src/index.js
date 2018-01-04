@@ -79,7 +79,6 @@ export default class extends Generator {
     ]).then((answers) => {
       this.answers = answers;
       this.context = { ...this.context, ...this.answers };
-      this.log('Name:', answers.name);
     });
   }
 
