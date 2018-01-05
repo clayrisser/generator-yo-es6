@@ -127,7 +127,7 @@ export default class extends Generator {
   }
 
   configuring() {
-    if (!this.options.destination && !isEmpty) {
+    if (!this.options.destination && !isEmpty()) {
       this.destinationRoot(path.resolve(this.answers.name));
     }
   }
