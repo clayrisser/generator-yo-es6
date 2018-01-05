@@ -13,8 +13,8 @@
     "app"
   ],
   "scripts": {
-    "build": "rm -rf ./app/*.js && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
-    "clean": "rm -rf ./app ./es ./lib ./demo",
+    "build": "npm run clean && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
+    "clean": "rm -rf ./app/*.js ./es ./lib ./demo",
     "link": "npm link && npm link generator-<%= name %>",
     "lint": "node ./node_modules/eslint/bin/eslint ./",
     "lint:fix": "node ./node_modules/eslint/bin/eslint --fix ./",
