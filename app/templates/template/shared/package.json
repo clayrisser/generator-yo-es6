@@ -1,6 +1,6 @@
 {
   "name": "generator-<%= name %>",
-  "version": "<%= version %>",
+  "version": "v<%= version %>",
   "description": "<%= description %>",
   "keywords": [
     "yeoman-generator",
