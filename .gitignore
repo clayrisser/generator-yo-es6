@@ -70,5 +70,5 @@ typings/
 es/
 lib/
 app/index.js
-app/template.js
+app/lib.js
 demo/

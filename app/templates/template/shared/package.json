@@ -13,18 +13,21 @@
     "app"
   ],
   "scripts": {
-    "link": "npm link && npm link generator-yohoho",
-    "start": "npm run lint && npm run build && node ./node_modules/yo/lib/cli yohoho",
     "build": "rm -rf ./app/*.js && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
-    "test": "node ./node_modules/jnwb/lib/bin/nwb test",
-    "test:coverage": "node ./node_modules/jnwb/lib/bin/nwb test --coverage",
-    "test:watch": "node ./node_modules/jnwb/lib/bin/nwb test --server",
+    "clean": "rm -rf ./app ./es ./lib",
+    "link": "npm link && npm link generator-yohoho",
     "lint": "node ./node_modules/eslint/bin/eslint ./",
     "lint:fix": "node ./node_modules/eslint/bin/eslint --fix ./",
-    "clean": "rm -rf ./app ./es ./lib"
+    "start": "npm run lint && npm run build && node ./node_modules/yo/lib/cli yohoho",
+    "test": "node ./node_modules/jnwb/lib/bin/nwb test",
+    "test:coverage": "node ./node_modules/jnwb/lib/bin/nwb test --coverage",
+    "test:watch": "node ./node_modules/jnwb/lib/bin/nwb test --server"
   },
   "dependencies": {
+    "empty-dir": "^0.2.1",
     "fs-extra-promise": "^1.0.1",
+    "git-user-email": "git+https://git@github.com/jamrizzi/git-user-email.git",
+    "git-user-name": "^2.0.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "yeoman-generator": "^1.0.0",
