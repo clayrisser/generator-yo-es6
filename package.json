@@ -1,6 +1,6 @@
 {
   "name": "generator-yohoho",
-  "version": "v0.2.7",
+  "version": "v0.2.8",
   "description": "A pragmatic implementation of TrailsJS for rapid development",
   "keywords": [
     "yeoman-generator",
@@ -25,6 +25,7 @@
     "clean": "rm -rf ./app/*.js ./es ./lib ./demo"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "empty-dir": "^0.2.1",
     "fs-extra-promise": "^1.0.1",
     "git-user-email": "git+https://git@github.com/jamrizzi/git-user-email.git",
