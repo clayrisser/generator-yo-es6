@@ -28,9 +28,15 @@ export default class extends Generator {
       },
       {
         type: 'input',
-        name: 'productVersion',
-        message: 'Project Version:',
+        name: 'version',
+        message: 'Version:',
         default: 'v0.0.1'
+      },
+      {
+        type: 'input',
+        name: 'license',
+        message: 'License:',
+        default: 'MIT'
       },
       {
         type: 'input',
@@ -57,18 +63,17 @@ export default class extends Generator {
         default: 'https://github.com/jamrizzi/generator-yohoho'
       },
       {
+        type: 'input',
+        name: 'repository',
+        message: 'Repository:',
+        default: 'https://github.com/jamrizzi/generator-yohoho'
+      },
+      {
         type: 'list',
         name: 'template',
         message: 'Template',
         choices: ['minimal'],
         default: 'minimal'
-      },
-      {
-        type: 'list',
-        name: 'database',
-        message: 'Database',
-        choices: ['memory', 'mongo'],
-        default: 'memory'
       },
       {
         type: 'confirm',

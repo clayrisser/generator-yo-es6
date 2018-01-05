@@ -1,7 +1,7 @@
 {
-  "name": "generator-yohoho",
-  "version": "0.1.0",
-  "description": "A generator for yeoman generators",
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
   "keywords": [
     "yeoman-generator",
     "generator",
@@ -24,6 +24,7 @@
     "clean": "rm -rf ./app ./es ./lib"
   },
   "dependencies": {
+    "fs-extra-promise": "^1.0.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "yeoman-generator": "^1.0.0",
@@ -35,8 +36,8 @@
     "jnwb": "^0.1.5",
     "yo": "^2.0.0"
   },
-  "author": "Jam Risser <jam@jamrizzi.com>",
-  "homepage": "https://github.com/jamrizzi/generator-yeoman",
-  "license": "MIT",
-  "repository": "https://github.com/jamrizzi/generator-yeoman"
+  "author": "<%= authorName %> <<%= authorEmail %>>",
+  "homepage": "<%= homepage %>",
+  "license": "<%= license %>",
+  "repository": "<%= repository %>"
 }
