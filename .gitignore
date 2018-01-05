@@ -69,6 +69,5 @@ typings/
 # Application
 es/
 lib/
-app/index.js
-app/lib.js
+app/*.js
 demo/
