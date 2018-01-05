@@ -13,7 +13,7 @@
     "app"
   ],
   "scripts": {
-    "build": "rm -rf ./app/*.js && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
+    "build": "npm run clean && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
     "clean": "rm -rf ./app/*.js ./es ./lib ./demo",
     "link": "npm link && npm link generator-yohoho",
     "lint": "node ./node_modules/eslint/bin/eslint ./",
