@@ -128,7 +128,7 @@ export default class extends Generator {
 
   configuring() {
     if (!this.options.destination && !isEmpty()) {
-      this.destinationRoot(`generator-${path.resolve(this.answers.name)}`);
+      this.destinationRoot(path.resolve(`generator-${this.answers.name}`));
     }
   }
 
