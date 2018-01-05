@@ -42,7 +42,7 @@ export function copy(yo) {
       yo.destinationPath('tests/index-test.js'),
       ...yo.context
     ),
-    yo.fs.copy(yo.templatePath('template/shared/LICENSE'), yo.destinationPath('LICENSE')),
+    yo.fs.copyTpl(yo.templatePath('template/shared/LICENSE'), yo.destinationPath('LICENSE'), ...yo.context),
     yo.fs.copyTpl(yo.templatePath('template/shared/README.md'), yo.destinationPath('README.md'), ...yo.context),
     yo.fs.copy(yo.templatePath('template/shared/_editorconfig'), yo.destinationPath('.editorconfig')),
     yo.fs.copy(yo.templatePath('template/shared/_eslintignore'), yo.destinationPath('.eslintignore')),
