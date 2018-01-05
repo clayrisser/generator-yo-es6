@@ -1,3 +1,3 @@
-# generator-yohoho
+# generator-<%= name %>
 
-A generator for yeoman generators
+<%= description %>

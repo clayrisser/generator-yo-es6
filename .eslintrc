@@ -9,8 +9,8 @@
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
     "yoda": "off",
-    "no-useless-escape": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "no-useless-escape": "off"
   },
   "env": {
     "node": true

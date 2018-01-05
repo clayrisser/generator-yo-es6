@@ -1,6 +1,6 @@
 {
   "name": "generator-yohoho",
-  "version": "v0.2.3",
+  "version": "v0.2.4",
   "description": "A pragmatic implementation of TrailsJS for rapid development",
   "keywords": [
     "yeoman-generator",
@@ -37,6 +37,9 @@
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
     "expect": "^22.0.3",
     "jnwb": "^0.1.5",
     "yo": "^2.0.0"
