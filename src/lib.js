@@ -50,6 +50,6 @@ export function copy(yo) {
     yo.fs.copy(yo.templatePath('template/shared/_gitignore'), yo.destinationPath('.gitignore')),
     yo.fs.copy(yo.templatePath('template/shared/_npmignore'), yo.destinationPath('.npmignore')),
     yo.fs.copy(yo.templatePath('template/shared/nwb.config.js'), yo.destinationPath('nwb.config.js')),
-    yo.fs.copyTpl(yo.templatePath('template/shared/package.json'), yo.destinationPath('package.json'), ...yo.context)
+    yo.fs.copyTpl(yo.templatePath('template/shared/_package.json'), yo.destinationPath('package.json'), ...yo.context)
   ]);
 }
