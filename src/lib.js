@@ -30,7 +30,11 @@ export function guessAuthorName() {
 export function copy(yo) {
   return Promise.all([
     fs.mkdirsSync(yo.destinationPath('app/templates/template/minimal')),
-    fs.mkdirsSync(yo.destinationPath('app/templates/template/shared')),
+    yo.fs.copyTpl(
+      yo.templatePath('template/shared/app/templates/template/shared/**'),
+      yo.destinationPath('app/templates/template/shared'),
+      ...yo.context
+    ),
     yo.fs.copyTpl(yo.templatePath('template/shared/src/**'), yo.destinationPath('src'), ...yo.context),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/tests/_eslintrc'),
