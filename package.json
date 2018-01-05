@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
     "expect": "^22.0.3",
     "jnwb": "^0.1.5",
     "yo": "^2.0.0"
