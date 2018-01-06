@@ -44,7 +44,7 @@ export default class extends Generator {
         type: 'input',
         name: 'version',
         message: 'Version:',
-        default: 'v0.0.1'
+        default: '0.0.1'
       },
       {
         type: 'input',
