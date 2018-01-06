@@ -18,6 +18,7 @@
     "link": "npm link && npm link generator-<%= name %>",
     "lint": "node ./node_modules/eslint/bin/eslint ./",
     "lint:fix": "node ./node_modules/eslint/bin/eslint --fix ./",
+    "prepublish": "npm run build",
     "start": "npm run clean && npm run lint && npm run build && node ./node_modules/yo/lib/cli --destination=demo <%= name %>",
     "test": "node ./node_modules/jnwb/lib/bin/nwb test",
     "test:coverage": "node ./node_modules/jnwb/lib/bin/nwb test --coverage",
