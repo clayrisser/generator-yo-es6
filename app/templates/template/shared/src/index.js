@@ -142,10 +142,8 @@ export default class extends Generator {
 
   install() {
     const install = this.options.install ? this.options.install[0].toLowerCase() : 'y';
-    if (!this.answers.install || install === 'n' || install === 'f') {
-      return;
-    }
-    this.installDependencies({
+    if (!this.answers.install || install === 'n' || install === 'f') return false;
+    return this.installDependencies({
       npm: true,
       bower: false,
       yarn: false
