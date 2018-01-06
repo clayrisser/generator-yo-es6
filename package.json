@@ -1,6 +1,6 @@
 {
   "name": "generator-yohoho",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "A pragmatic implementation of TrailsJS for rapid development",
   "keywords": [
     "yeoman-generator",
