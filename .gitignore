@@ -67,7 +67,4 @@ typings/
 .idea/
 
 # Application
-es/
 lib/
-app/*.js
-demo/

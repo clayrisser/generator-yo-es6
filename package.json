@@ -1,28 +1,25 @@
 {
   "name": "generator-yohoho",
-  "version": "0.2.20",
-  "description": "A pragmatic implementation of TrailsJS for rapid development",
+  "version": "0.3.0",
+  "description": "A generator for yeoman generators",
   "keywords": [
     "yeoman-generator",
     "generator",
     "yo",
     "yeoman"
   ],
-  "main": "app/index.js",
+  "main": "lib/index.js",
   "files": [
     "app"
   ],
   "scripts": {
-    "build": "npm run clean && node ./node_modules/jnwb/lib/bin/nwb build && mkdir -p ./app && cp -r ./lib/* ./app",
-    "clean": "rm -rf ./app/*.js ./es ./lib ./demo",
+    "build": "npm run clean && babel src -d lib",
+    "clean": "rm -rf demo lib",
     "link": "npm link && npm link generator-yohoho",
-    "lint": "node ./node_modules/eslint/bin/eslint ./",
-    "lint:fix": "node ./node_modules/eslint/bin/eslint --fix ./",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",
-    "start": "npm run clean && npm run lint && npm run build && node ./node_modules/yo/lib/cli --destination=demo yohoho",
-    "test": "node ./node_modules/jnwb/lib/bin/nwb test",
-    "test:coverage": "node ./node_modules/jnwb/lib/bin/nwb test --coverage",
-    "test:watch": "node ./node_modules/jnwb/lib/bin/nwb test --server",
+    "start": "npm run clean && npm run lint && npm run build && yo --destination=demo yohoho",
     "unlink": "npm unlink generator-yohoho"
   },
   "dependencies": {
@@ -37,17 +34,28 @@
     "yeoman-option-or-prompt": "git+https://github.com/artefact-group/yeoman-option-or-prompt.git"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "expect": "^22.0.3",
-    "jnwb": "^0.1.5",
     "yo": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
   },
   "author": "Jam Risser <jam@jamrizzi.com>",
   "homepage": "https://github.com/jamrizzi/generator-yohoho",
   "license": "MIT",
-  "repository": "https://github.com/jamrizzi/generator-yohoho"
+  "repository": "https://github.com/jamrizzi/generator-yohoho",
+  "eslintIgnore": [
+    "lib",
+    "templates",
+    "demo"
+  ]
 }

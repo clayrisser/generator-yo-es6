@@ -13,7 +13,8 @@ import {
 
 export default class extends Generator {
   initializing() {
-    if (this.options.destination) this.destinationRoot(this.options.destination);
+    if (this.options.destination)
+      this.destinationRoot(this.options.destination);
     this.context = {
       moment
     };
@@ -29,11 +30,7 @@ export default class extends Generator {
         default: guessName()
       }
     ]);
-    const {
-      description,
-      version,
-      license
-    } = await this.optionOrPrompt([
+    const { description, version, license } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'description',
@@ -53,10 +50,7 @@ export default class extends Generator {
         default: 'MIT'
       }
     ]);
-    const {
-      authorName,
-      authorEmail
-    } = await this.optionOrPrompt([
+    const { authorName, authorEmail } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'authorName',
@@ -141,8 +135,11 @@ export default class extends Generator {
   conflicts() {}
 
   install() {
-    const install = this.options.install ? this.options.install[0].toLowerCase() : 'y';
-    if (!this.answers.install || install === 'n' || install === 'f') return false;
+    const install = this.options.install
+      ? this.options.install[0].toLowerCase()
+      : 'y';
+    if (!this.answers.install || install === 'n' || install === 'f')
+      return false;
     return this.installDependencies({
       npm: true,
       bower: false,
