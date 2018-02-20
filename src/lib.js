@@ -29,24 +29,18 @@ export function guessAuthorName() {
 
 export function copy(yo) {
   return Promise.all([
-    fs.mkdirsSync(yo.destinationPath('app/templates/template/minimal')),
+    fs.mkdirsSync(
+      yo.destinationPath('generators/app/templates/template/minimal')
+    ),
     yo.fs.copy(
-      yo.templatePath('template/shared/app/templates/template/shared/**'),
-      yo.destinationPath('app/templates/template/shared')
+      yo.templatePath(
+        'template/shared/generators/app/templates/template/shared/**'
+      ),
+      yo.destinationPath('generators/app/templates/template/shared')
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/src/**'),
       yo.destinationPath('src'),
-      { ...yo.context }
-    ),
-    yo.fs.copyTpl(
-      yo.templatePath('template/shared/tests/_eslintrc'),
-      yo.destinationPath('tests/.eslintrc'),
-      { ...yo.context }
-    ),
-    yo.fs.copyTpl(
-      yo.templatePath('template/shared/tests/index-test.js'),
-      yo.destinationPath('tests/index-test.js'),
       { ...yo.context }
     ),
     yo.fs.copyTpl(
@@ -64,8 +58,8 @@ export function copy(yo) {
       yo.destinationPath('.editorconfig')
     ),
     yo.fs.copy(
-      yo.templatePath('template/shared/_eslintignore'),
-      yo.destinationPath('.eslintignore')
+      yo.templatePath('template/shared/_prettierrc'),
+      yo.destinationPath('.prettierrc')
     ),
     yo.fs.copy(
       yo.templatePath('template/shared/_eslintrc'),
@@ -74,14 +68,6 @@ export function copy(yo) {
     yo.fs.copy(
       yo.templatePath('template/shared/_gitignore'),
       yo.destinationPath('.gitignore')
-    ),
-    yo.fs.copy(
-      yo.templatePath('template/shared/_npmignore'),
-      yo.destinationPath('.npmignore')
-    ),
-    yo.fs.copy(
-      yo.templatePath('template/shared/nwb.config.js'),
-      yo.destinationPath('nwb.config.js')
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/_package.json'),

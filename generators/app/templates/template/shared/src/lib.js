@@ -1,6 +1,7 @@
 import emptyDir from 'empty-dir';
 import gitUserEmail from 'git-user-email';
 import gitUserName from 'git-user-name';
+import fs from 'fs-extra-promise';
 
 export function isEmpty() {
   return emptyDir.sync(process.cwd());
@@ -31,7 +32,7 @@ export function copy(yo) {
     yo.fs.copyTpl(
       yo.templatePath('template/shared/_package.json'),
       yo.destinationPath('package.json'),
-      ...yo.context
+      { ...yo.context }
     )
   ]);
 }
