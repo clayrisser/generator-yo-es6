@@ -1,12 +1,13 @@
 {
-  "name": "generator-yohoho",
-  "version": "0.4.0",
-  "description": "A generator for yeoman generators",
+  "name": "generator-yo-es6",
+  "version": "0.1.0",
+  "description": "A generator for ES6 yeoman generators",
   "keywords": [
     "yeoman-generator",
     "generator",
     "yo",
-    "yeoman"
+    "yeoman",
+    "es6"
   ],
   "main": "app/index.js",
   "files": [
@@ -15,12 +16,12 @@
   "scripts": {
     "build": "npm run clean && babel src -d generators/app",
     "clean": "rm -rf demo generators/*/*.js",
-    "link": "npm link && npm link generator-yohoho",
+    "link": "npm link && npm link generator-yo-es6",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",
-    "start": "npm run clean && npm run lint && npm run build && yo --destination=demo yohoho",
-    "unlink": "npm unlink generator-yohoho"
+    "start": "npm run clean && npm run lint && npm run build && yo --destination=demo yo-es6",
+    "unlink": "npm unlink generator-yo-es6"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -57,9 +58,9 @@
     ]
   },
   "author": "Jam Risser <jam@jamrizzi.com>",
-  "homepage": "https://github.com/jamrizzi/generator-yohoho",
+  "homepage": "https://github.com/jamrizzi/generator-yo-es6",
   "license": "MIT",
-  "repository": "https://github.com/jamrizzi/generator-yohoho",
+  "repository": "https://github.com/jamrizzi/generator-yo-es6",
   "eslintIgnore": [
     "generators",
     "demo"

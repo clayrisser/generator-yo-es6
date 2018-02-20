@@ -1,3 +1,3 @@
-# generator-yohoho
+# generator-yo-es6
 
-A generator for yeoman generators
+A generator for ES6 yeoman generators
