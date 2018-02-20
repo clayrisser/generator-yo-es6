@@ -1,6 +1,6 @@
 {
   "name": "generator-yohoho",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A generator for yeoman generators",
   "keywords": [
     "yeoman-generator",
@@ -8,13 +8,13 @@
     "yo",
     "yeoman"
   ],
-  "main": "lib/index.js",
+  "main": "app/index.js",
   "files": [
     "app"
   ],
   "scripts": {
-    "build": "npm run clean && babel src -d lib",
-    "clean": "rm -rf demo lib",
+    "build": "npm run clean && babel src -d app",
+    "clean": "rm -rf demo app/*.js",
     "link": "npm link && npm link generator-yohoho",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
@@ -23,6 +23,7 @@
     "unlink": "npm unlink generator-yohoho"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "empty-dir": "^0.2.1",
     "fs-extra-promise": "^1.0.1",

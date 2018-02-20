@@ -68,3 +68,4 @@ typings/
 
 # Application
 lib/
+app/*.js

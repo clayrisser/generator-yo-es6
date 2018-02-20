@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import Generator from 'yeoman-generator';
 import moment from 'moment';
 import optionOrPrompt from 'yeoman-option-or-prompt';
