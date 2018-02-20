@@ -1,6 +1,6 @@
 {
   "name": "generator-yo-es6",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A generator for ES6 yeoman generators",
   "keywords": [
     "yeoman-generator",
