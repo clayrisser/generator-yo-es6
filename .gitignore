@@ -68,4 +68,4 @@ typings/
 
 # Application
 lib/
-app/*.js
+generators/*/*.js

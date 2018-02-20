@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import Generator from 'yeoman-generator';
 import moment from 'moment';
 import optionOrPrompt from 'yeoman-option-or-prompt';
@@ -12,7 +11,7 @@ import {
   isEmpty
 } from './lib';
 
-export default class extends Generator {
+module.exports = class extends Generator {
   initializing() {
     if (this.options.destination)
       this.destinationRoot(this.options.destination);
