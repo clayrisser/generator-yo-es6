@@ -23,7 +23,11 @@
     "unlink": "npm unlink generator-yohoho"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "empty-dir": "^0.2.1",
+    "eslint": "^4.18.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "fs-extra-promise": "^1.0.1",
     "git-user-email": "git+https://git@github.com/jamrizzi/git-user-email.git",
     "git-user-name": "^2.0.0",
@@ -36,9 +40,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^4.14.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "yo": "^2.0.0"
   },
@@ -48,9 +49,8 @@
         "env",
         {
           "targets": {
-            "node": "current"
-          },
-          "modules": "commonjs"
+            "node": "4"
+          }
         }
       ],
       "stage-2"

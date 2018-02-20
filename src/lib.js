@@ -37,27 +37,27 @@ export function copy(yo) {
     yo.fs.copyTpl(
       yo.templatePath('template/shared/src/**'),
       yo.destinationPath('src'),
-      ...yo.context
+      { ...yo.context }
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/tests/_eslintrc'),
       yo.destinationPath('tests/.eslintrc'),
-      ...yo.context
+      { ...yo.context }
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/tests/index-test.js'),
       yo.destinationPath('tests/index-test.js'),
-      ...yo.context
+      { ...yo.context }
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/LICENSE'),
       yo.destinationPath('LICENSE'),
-      ...yo.context
+      { ...yo.context }
     ),
     yo.fs.copyTpl(
       yo.templatePath('template/shared/README.md'),
       yo.destinationPath('README.md'),
-      ...yo.context
+      { ...yo.context }
     ),
     yo.fs.copy(
       yo.templatePath('template/shared/_editorconfig'),
@@ -86,7 +86,7 @@ export function copy(yo) {
     yo.fs.copyTpl(
       yo.templatePath('template/shared/_package.json'),
       yo.destinationPath('package.json'),
-      ...yo.context
+      { ...yo.context }
     )
   ]);
 }
