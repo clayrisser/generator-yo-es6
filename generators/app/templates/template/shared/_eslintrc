@@ -1,5 +1,6 @@
 {
   "extends": ["airbnb/base", "prettier"],
+  "parser": "babel-eslint",
   "rules": {
     "comma-dangle": ["error", "never"],
     "jsx-a11y/href-no-hash": "off",
