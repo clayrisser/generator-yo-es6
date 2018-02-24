@@ -9,7 +9,7 @@
     "yeoman",
     "es6"
   ],
-  "main": "app/index.js",
+  "main": "generators/app/index.js",
   "files": [
     "generators"
   ],
