@@ -84,23 +84,20 @@ module.exports = class extends Generator {
         default: `https://${githubUsername}.com`
       }
     ]);
-    const {
-      homepage,
-      repository,
-      template,
-      install
-    } = await this.optionOrPrompt([
-      {
-        type: 'input',
-        name: 'homepage',
-        message: 'Homepage:',
-        default: `https://github.com/${githubUsername}/${name}`
-      },
+    const { repository } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'repository',
         message: 'Repository:',
         default: `https://github.com/${githubUsername}/${name}`
+      }
+    ]);
+    const { homepage, template, install } = await this.optionOrPrompt([
+      {
+        type: 'input',
+        name: 'homepage',
+        message: 'Homepage:',
+        default: repository
       },
       {
         type: 'list',
