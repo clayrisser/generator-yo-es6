@@ -65,31 +65,36 @@ module.exports = class extends Generator {
         default: guessEmail()
       }
     ]);
+    const { githubUsername } = await this.optionOrPrompt([
+      {
+        type: 'input',
+        name: 'githubUsername',
+        message: 'GitHub Username:',
+        default: guessUsername(authorEmail)
+      }
+    ]);
     const { authorUrl } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'authorUrl',
         message: 'Author URL:',
-        default: `https://${guessUsername(authorEmail)}.com`
+        default: `https://${githubUsername}.com`
       }
     ]);
-    const {
-      homepage,
-      repository,
-      template,
-      install
-    } = await this.optionOrPrompt([
-      {
-        type: 'input',
-        name: 'homepage',
-        message: 'Homepage:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
-      },
+    const { repository } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'repository',
         message: 'Repository:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
+        default: `https://github.com/${githubUsername}/${name}`
+      }
+    ]);
+    const { homepage, template, install } = await this.optionOrPrompt([
+      {
+        type: 'input',
+        name: 'homepage',
+        message: 'Homepage:',
+        default: repository
       },
       {
         type: 'list',
@@ -106,17 +111,18 @@ module.exports = class extends Generator {
       }
     ]);
     this.answers = {
-      name,
-      description,
-      version,
-      license,
+      authorEmail,
       authorName,
       authorUrl,
-      authorEmail,
+      description,
+      githubUsername,
       homepage,
+      install,
+      license,
+      name,
       repository,
       template,
-      install
+      version
     };
     this.context = { ...this.context, ...this.answers };
   }
