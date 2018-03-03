@@ -1,3 +1,3 @@
-# generator-<%= name %>
+# <%= name %>
 
-<%= description %>
+> <%= description %>
