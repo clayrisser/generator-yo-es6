@@ -23,7 +23,7 @@ module.exports = class extends Generator {
   }
 
   async prompting() {
-    const { name } = await this.optionOrPrompt([
+    let { name } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'name',
@@ -31,12 +31,15 @@ module.exports = class extends Generator {
         default: guessName()
       }
     ]);
+    if (!/^generator-/.test(name)) {
+      name = `generator-${name}`;
+    }
     const { description, version, license } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'description',
         message: 'Project Description:',
-        default: `The awesome ${name} project`
+        default: `Yeoman generator for ${name.substr(10)}`
       },
       {
         type: 'input',
@@ -65,12 +68,20 @@ module.exports = class extends Generator {
         default: guessEmail()
       }
     ]);
+    const { githubUsername } = await this.optionOrPrompt([
+      {
+        type: 'input',
+        name: 'githubUsername',
+        message: 'GitHub Username:',
+        default: guessUsername(authorEmail)
+      }
+    ]);
     const { authorUrl } = await this.optionOrPrompt([
       {
         type: 'input',
         name: 'authorUrl',
         message: 'Author URL:',
-        default: `https://${guessUsername(authorEmail)}.com`
+        default: `https://${githubUsername}.com`
       }
     ]);
     const {
@@ -83,13 +94,13 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'homepage',
         message: 'Homepage:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
+        default: `https://github.com/${githubUsername}/${name}`
       },
       {
         type: 'input',
         name: 'repository',
         message: 'Repository:',
-        default: `https://github.com/${guessUsername(authorEmail)}/${name}`
+        default: `https://github.com/${githubUsername}/${name}`
       },
       {
         type: 'list',
@@ -106,24 +117,25 @@ module.exports = class extends Generator {
       }
     ]);
     this.answers = {
-      name,
-      description,
-      version,
-      license,
+      authorEmail,
       authorName,
       authorUrl,
-      authorEmail,
+      description,
+      githubUsername,
       homepage,
+      install,
+      license,
+      name,
       repository,
       template,
-      install
+      version
     };
     this.context = { ...this.context, ...this.answers };
   }
 
   configuring() {
     if (!this.options.destination && !isEmpty()) {
-      this.destinationRoot(path.resolve(`generator-${this.answers.name}`));
+      this.destinationRoot(path.resolve(this.answers.name));
     }
   }
 

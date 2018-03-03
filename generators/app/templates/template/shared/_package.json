@@ -1,5 +1,5 @@
 {
-  "name": "generator-<%= name %>",
+  "name": "<%= name %>",
   "version": "<%= version %>",
   "description": "<%= description %>",
   "keywords": ["yeoman-generator", "generator", "yo", "yeoman"],
@@ -8,13 +8,13 @@
   "scripts": {
     "build": "npm run clean && babel src -d generators/app",
     "clean": "rm -rf demo generators/*/*.js",
-    "link": "npm link && npm link generator-<%= name %>",
+    "link": "npm link && npm link <%= name %>",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",
     "start":
-      "npm run clean && npm run lint && npm run build && yo --destination=demo <%= name %>",
-    "unlink": "npm unlink generator-<%= name %>"
+      "npm run clean && npm run lint && npm run build && yo --destination=demo <%= name.substr(10) %>",
+    "unlink": "npm unlink <%= name %>"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
