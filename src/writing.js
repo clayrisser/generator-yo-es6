@@ -1,9 +1,4 @@
-import fs from 'fs-extra';
-
 export default async function writing(yo) {
-  fs.mkdirsSync(
-    yo.destinationPath('generators/app/templates/template/minimal')
-  );
   yo.fs.copy(
     yo.templatePath(
       'template/shared/generators/app/templates/template/shared/**'

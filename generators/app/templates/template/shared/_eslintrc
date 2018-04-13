@@ -2,16 +2,17 @@
   "extends": ["airbnb/base", "prettier"],
   "parser": "babel-eslint",
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "jsx-a11y/href-no-hash": "off",
-    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
-    "global-require": "off",
-    "class-methods-use-this": "off",
-    "import/prefer-default-export": "off",
-    "no-param-reassign": "off",
-    "yoda": "off",
     "arrow-body-style": "off",
-    "no-useless-escape": "off"
+    "class-methods-use-this": "off",
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "no-param-reassign": "off",
+    "no-useless-escape": "off",
+    "yoda": "off",
+    "no-await-in-loop": "off",
+    "comma-dangle": ["error", "never"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none" }]
   },
   "env": {
     "node": true
