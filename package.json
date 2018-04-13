@@ -24,12 +24,12 @@
     "unlink": "npm unlink generator-yo-es6"
   },
   "dependencies": {
-    "generator-github-project": "^0.2.2",
+    "generator-github-project": "^0.2.3",
     "idempotent-babel-polyfill": "0.0.3",
     "lodash": "^4.17.4",
     "project-guess": "^0.2.3",
     "yeoman-generator": "^1.0.0",
-    "yo-base-prompts": "^0.1.3",
+    "yo-base-prompts": "^0.1.5",
     "yo-option-or-prompt": "^0.1.2"
   },
   "devDependencies": {
