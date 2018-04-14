@@ -1,6 +1,6 @@
 {
   "name": "generator-yo-es6",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "🎩 A generator for ES6 yeoman generators",
   "keywords": [
     "yeoman-generator",
@@ -24,7 +24,7 @@
     "unlink": "npm unlink generator-yo-es6"
   },
   "dependencies": {
-    "generator-github-project": "^0.2.3",
+    "generator-github-project": "^0.2.4",
     "idempotent-babel-polyfill": "0.0.3",
     "lodash": "^4.17.4",
     "project-guess": "^0.2.3",

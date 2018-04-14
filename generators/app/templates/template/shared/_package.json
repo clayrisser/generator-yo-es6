@@ -17,11 +17,11 @@
     "unlink": "npm unlink <%= name %>"
   },
   "dependencies": {
-    "generator-github-project": "^0.2.2",
+    "generator-github-project": "^0.2.4",
     "idempotent-babel-polyfill": "0.0.3",
     "lodash": "^4.17.4",
     "yeoman-generator": "^1.0.0",
-    "yo-base-prompts": "^0.1.3",
+    "yo-base-prompts": "^0.1.5",
     "yo-option-or-prompt": "^0.1.2"
   },
   "devDependencies": {
