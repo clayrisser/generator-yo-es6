@@ -17,7 +17,7 @@
     "unlink": "npm unlink <%= name %>"
   },
   "dependencies": {
-    "generator-github-project": "^0.2.5",
+    "generator-github-project": "^0.2.6",
     "idempotent-babel-polyfill": "0.0.3",
     "lodash": "^4.17.4",
     "yeoman-generator": "^1.0.0",
