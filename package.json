@@ -14,13 +14,15 @@
     "generators"
   ],
   "scripts": {
-    "build": "npm run clean && babel src -d generators/app",
-    "clean": "rm -rf demo generators/*/*.js",
+    "build": "npm run test && babel src -d generators/app",
+    "clean": "rimraf demo generators/*/*.js",
+    "format": "prettier --write ./src/**/*.js",
     "link": "npm link && npm link generator-yo-es6",
-    "lint": "eslint ./",
-    "lint:fix": "eslint --fix ./",
-    "prepublish": "npm run build",
-    "start": "npm run clean && npm run lint && npm run build && yo --destination=demo yo-es6",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run clean && npm run build",
+    "start": "npm run clean && npm run test && npm run build && yo --destination=demo yo-es6",
+    "test": "npm run lint",
     "unlink": "npm unlink generator-yo-es6"
   },
   "dependencies": {
@@ -33,28 +35,14 @@
     "yo-option-or-prompt": "^0.1.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-preset-everything": "^0.1.2",
     "eslint": "^4.18.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-config-jam": "^0.1.4",
+    "rimraf": "^2.6.2",
     "yo": "^2.0.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "4"
-          }
-        }
-      ],
-      "stage-2"
-    ]
   },
   "author": "Jam Risser <jam@jamrizzi.com>",
   "homepage": "https://github.com/jamrizzi/generator-yo-es6",
