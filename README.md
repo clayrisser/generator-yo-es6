@@ -1,11 +1,9 @@
 # generator-yo-es6
 
-[![Beerpay](https://beerpay.io/jamrizzi/generator-yo-es6/badge.svg?style=beer-square)](https://beerpay.io/jamrizzi/generator-yo-es6)
-[![Beerpay](https://beerpay.io/jamrizzi/generator-yo-es6/make-wish.svg?style=flat-square)](https://beerpay.io/jamrizzi/generator-yo-es6?focus=wish)
 [![NPM](https://img.shields.io/npm/v/generator-yo-es6.svg?style=flat-square)](https://www.npmjs.com/package/generator-yo-es6)
 [![NPM](https://img.shields.io/npm/dt/generator-yo-es6.svg?style=flat-square)](https://www.npmjs.com/package/generator-yo-es6)
-[![Drone](https://ci.jamrizzi.com/api/badges/jamrizzi/generator-yo-es6/status.svg)](https://ci.jamrizzi.com/jamrizzi/generator-yo-es6)
-[![GitHub stars](https://img.shields.io/github/stars/jamrizzi/generator-yo-es6.svg?style=social&label=Stars)](https://github.com/jamrizzi/generator-yo-es6)
+[![Drone](https://ci.codejam.ninja/api/badges/codejamninja/generator-yo-es6/status.svg)](https://ci.codejam.ninja/codejamninja/generator-yo-es6)
+[![GitHub stars](https://img.shields.io/github/stars/codejamninja/generator-yo-es6.svg?style=social&label=Stars)](https://github.com/codejamninja/generator-yo-es6)
 
 > 🎩 A generator for ES6 yeoman generators
 
@@ -40,35 +38,36 @@ yo yo-es6
 
 ## Support
 
-Submit an [issue](https://github.com/jamrizzi/generator-yo-es6/issues/new)
+Submit an [issue](https://github.com/codejamninja/generator-yo-es6/issues/new)
 
 
 ## Contributing
 
-Review the [guidelines for contributing](https://github.com/jamrizzi/generator-yo-es6/blob/master/CONTRIBUTING.md)
+Review the [guidelines for contributing](https://github.com/codejamninja/generator-yo-es6/blob/master/CONTRIBUTING.md)
 
 
 ## License
 
-[MIT License](https://github.com/jamrizzi/generator-yo-es6/blob/master/LICENSE)
+[MIT License](https://github.com/codejamninja/generator-yo-es6/blob/master/LICENSE)
 
-[Jam Risser](https://jam.jamrizzi.com) &copy; 2018
+[Jam Risser](https://codejam.ninja) &copy; 2018
 
 
 ## Changelog
 
-Review the [changelog](https://github.com/jamrizzi/generator-yo-es6/blob/master/CHANGELOG.md)
+Review the [changelog](https://github.com/codejamninja/generator-yo-es6/blob/master/CHANGELOG.md)
 
 
 ## Credits
 
-* [Jam Risser](https://jam.jamrizzi.com) - Author
+* [Jam Risser](https://codejam.ninja) - Author
 
 
-## Support on Beerpay (actually, I drink coffee)
+## Support on Liberapay
 
-A ridiculous amount of coffee :coffee: :coffee: :coffee: was consumed in the process of building this project.
+A ridiculous amount of coffee ☕ ☕ ☕ was consumed in the process of building this project.
 
-[Add some fuel](https://beerpay.io/jamrizzi/generator-yo-es6) if you'd like to keep me going!
+[Add some fuel](https://liberapay.com/codejamninja/donate) if you'd like to keep me going!
 
-[![Beerpay](https://beerpay.io/jamrizzi/generator-yo-es6/badge.svg?style=beer-square)](https://beerpay.io/jamrizzi/generator-yo-es6)  [![Beerpay](https://beerpay.io/jamrizzi/generator-yo-es6/make-wish.svg?style=flat-square)](https://beerpay.io/jamrizzi/generator-yo-es6?focus=wish)
+[![Liberapay receiving](https://img.shields.io/liberapay/receives/codejamninja.svg?style=flat-square)](https://liberapay.com/codejamninja/donate)
+[![Liberapay patrons](https://img.shields.io/liberapay/patrons/codejamninja.svg?style=flat-square)](https://liberapay.com/codejamninja/donate)

@@ -44,10 +44,10 @@
     "rimraf": "^2.6.2",
     "yo": "^2.0.5"
   },
-  "author": "Jam Risser <jam@jamrizzi.com>",
-  "homepage": "https://github.com/jamrizzi/generator-yo-es6",
+  "author": "Jam Risser <jam@codejam.ninja>",
+  "homepage": "https://github.com/codejamninja/generator-yo-es6",
   "license": "MIT",
-  "repository": "https://github.com/jamrizzi/generator-yo-es6",
+  "repository": "https://github.com/codejamninja/generator-yo-es6",
   "eslintIgnore": [
     "generators",
     "demo"
