@@ -1,6 +1,6 @@
 {
   "name": "generator-yo-es6",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "🎩 A generator for ES6 yeoman generators",
   "keywords": [
     "yeoman-generator",
@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.1.0",
     "babel-preset-everything": "^0.1.2",
     "eslint": "^5.6.1",
-    "eslint-config-jam": "^0.1.4",
+    "eslint-config-jam": "^0.1.6",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2",
     "yo": "^2.0.5"
