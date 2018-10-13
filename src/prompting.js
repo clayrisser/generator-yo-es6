@@ -14,6 +14,7 @@ export default async function prompting(yo) {
   if (!/^generator-/.test(name)) {
     name = `generator-${name}`;
   }
+  yoBasePrompts.name = name;
   const destination = await yoBasePrompts.destinationPrompt(name);
   yoBasePrompts.destination = destination;
   const {

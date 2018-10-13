@@ -1,6 +1,6 @@
 {
   "name": "generator-yo-es6",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "🎩 A generator for ES6 yeoman generators",
   "keywords": [
     "yeoman-generator",
@@ -31,7 +31,7 @@
     "lodash": "^4.17.11",
     "project-guess": "^0.2.4",
     "yeoman-generator": "^1.0.0",
-    "yo-base-prompts": "^0.1.6",
+    "yo-base-prompts": "^0.1.7",
     "yo-option-or-prompt": "^0.2.0"
   },
   "devDependencies": {
