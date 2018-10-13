@@ -32,6 +32,7 @@
     "babel-preset-everything": "^0.1.2",
     "eslint": "^5.6.1",
     "eslint-config-jam": "^0.1.4",
+    "prettier": "^1.14.3",
     "rimraf": "^2.6.2",
     "yo": "^2.0.5"
   },
